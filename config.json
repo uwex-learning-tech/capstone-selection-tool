@@ -1,0 +1,54 @@
+{
+  "instructions-description": "<p>This project selection tool is intended to help you compare multiple projects (up to 4) using a consistent set of criteria and weighted scores to make an informed decision about the project you ultimately will complete as your Capstone project.</p><p><strong>Note:</strong> Final scores do not necessarily confirm or exclude a project from consideration. They are intended to facilitate a conversation about the relative strengths and weaknesses of the projects that are available to you.</p>",
+  "criteria": {
+    "description": "<p>Successful projects should be evaluated in a variety of ways. This selection tool aligns those criteria with the curriculum of the Information Technology Management program. Not all projects will incorporate all of the criteria below. This tool is intended to help you identify those that are most central to the success of your project.</p>",
+    "rank": {
+      "description": "<p>Ranks are <strong>predetermined</strong> based on past experience with potential Capstone projects. The most important aspect of a successful project is the potential impact upon or support your organization will provide. <strong>If you feel that an aspect of your project warrants a different rank</strong>, that should be part of how you discuss and argue for the feasibility of your project.</p>",
+      "rank-values": {
+        "rank-critical": 5,
+        "rank-important": 3,
+        "rank-nice-to-have": 1
+      }
+    },
+    "score": {
+      "description": "<p>Provides an overall assessment of the overall importance of this consideration in the successful completion of your project.</p>",
+      "score-values": {
+        "score-high": 90,
+        "score-medium": 70,
+        "score-low": 50
+      }
+    }
+  },
+  "project-criteria": [
+    {
+      "criteria-title": "Organizational Impact",
+      "project-description": "<p>Projects should have a significant impact on your organization in their ability to: increase revenue or decrease cost. This may be accomplished through any use of technology to improve a process, gain access to a new market, optimize performance, etc.</p><p>Overall, the best projects require a minimum of 4-5 months, and at least 150 hours to complete. They often also require that you step outside of your normal comfort zone by taking on increased responsibility, scope, complexity, or management dynamics.</p>",
+      "criteria-rank": 3,
+      "associated-courses": ["ITM 700 - Communications for IT Professionals", "ITM 715 - Data Science", "ITM 730 - Agile and Traditional Project Management", "ITM 735 - Business Analysis and Systems Design", "ITM 750 - Evaluation of Emerging Technologies"]
+    },
+    {
+      "criteria-title": "Financial Impact",
+      "project-description": "<p>What are the financial considerations associated with your project? Consider use of pro forma financial statements and key performance metrics to assess impact on cash flow, depreciation, rate of return, etc. Will the project require significant budgeting and financial planning?</p>",
+      "criteria-rank": 2,
+      "associated-courses": ["ITM 700 - Communications for IT Professionals", "ITM 710 - Finance for IT Management", "ITM 730 - Agile and Traditional Project Management"]
+    },
+    {
+      "criteria-title": "Infrastructure",
+      "project-description": "<p>What is the impact of your project on larger infrastructure needs, including local network, security model, enterprise applications, systems architecture, data needs, etc.</p>",
+      "criteria-rank": 2,
+      "associated-courses": ["ITM 700 - Communications for IT Professionals", "ITM 720 - Cloud Computing and Enterprise Applications", "ITM 725 - Enterprise Security", "ITM 730 - Agile and Traditional Project Management"]
+    },
+    {
+      "criteria-title": "Human Resources",
+      "project-description": "<p>Consider the combination of external and internal human resources required to complete your project. Include your analysis of the level of change required within your organization in the implementation and/or adoption of your work.</p>",
+      "criteria-rank": 3,
+      "associated-courses": ["ITM 700 - Communications for IT Professionals", "ITM 705 - Leading the IT Function", "ITM 730 - Agile and Traditional Project Management"]
+    },
+    {
+      "criteria-title": "Governance",
+      "project-description": "<p>Regulatory compliance, optimization of available resources, ensure trustworthiness of enterprise information, and support business strategy.</p><p>Consider: strategic alignment, IT service and control frameworks, portfolio management, IT risk management, and ethical issues in IT governance.</p>",
+      "criteria-rank": 3,
+      "associated-courses": ["ITM 700 - Communications for IT Professionals", "ITM 730 - Agile and Traditional Project Management", "ITM 740 - IT Operations", "ITM 745 - IT Governance, Ethics, and Regulatory"]
+    }
+  ]
+}

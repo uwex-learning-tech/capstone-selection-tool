@@ -1,0 +1,338 @@
+
+.yellow1{
+	background-color: #e7db87;
+}
+.yellow2{
+	background-color: #F2EFCC;
+}
+.blue0{
+	background-color: #9BB3D1;
+}
+.blue1{
+	background-color: #B8C5D8;
+}
+.blue2{
+	background-color: #DAE3ED;
+}
+.purple0{
+	background-color: #A29BCE;
+}
+.purple1{
+	background-color: #BAB9D6;
+}
+.purple2{
+	background-color: #DBDAEA;
+}
+.red0{
+	background-color: #CC9BAD;
+}
+.red1{
+	background-color: #D3B8C2;
+}
+.red2{
+	background-color: #E8DAE0;
+}
+.gold0{
+	background-color: #CCB29E;
+}
+.gold1{
+	background-color: #D1C3B8;
+}
+.gold2{
+	background-color: #E5DFDA;
+}
+.green0{
+	background-color: #B6CC9F;
+}
+.green1{
+	background-color: #C3CEB7;
+}
+.green2{
+	background-color: #DEE2D9;
+}
+.grey0{
+	background-color: #EDEDED;
+}
+.centerText{
+	text-align: center;
+}
+h2 {
+	padding-top: 1em;
+	margin-bottom: 0;
+}
+hr {
+	margin-top: 2em;
+	margin-bottom: 3em;
+	margin-right: 1em;
+}
+.addProjectBtn{
+	background: url(../img/plus-01.svg);
+	cursor: pointer;
+	width: 100%;
+	min-height: 399px;
+	border: none;
+
+}
+.removeProjectBtn{
+	background: url(../img/cross-01.svg);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width: 2em;
+	height: 2em;
+	border: none;
+	float: right;
+	//clear: both;
+
+}
+
+.cards, .project-criteria{
+	display: flex;
+	margin-bottom:1em;
+}
+
+.card{
+	padding-right:1em;
+	padding-left:1em;
+	margin-right:1em;
+	//background-color:grey;
+	border-radius: 0.15in;
+	
+}
+.card2{
+	min-width: 40%;
+}
+.card3{
+	max-width: 32%;
+}
+
+.card44{
+	max-width: 44%;
+}
+.cardScore{
+	width:100%;
+	//background-color: white;
+}
+.projectTile{
+	width: 100%;
+	padding: 1em;
+	margin-left: -1em;
+	margin-bottom: 1em;
+	//background-color: grey;
+	border-radius: 0.15in;
+}
+.projectTile input{
+	width: 2em;
+	margin:0;
+	margin-right: 1em;
+	padding:0;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	text-align: center;
+	
+}
+.disabled-text{
+	background: none;
+	background: none;
+	border: none;
+	text-color: black;
+}
+.rankNumber{
+	font-size: 2em;
+	text-align: center;
+	background: none;
+}
+dl {
+	  display: flex;
+	  flex-wrap: wrap;
+	}
+dt {
+  width: 40%;
+  font-weight: bold;
+}
+dd {
+  margin-left: auto;
+  width: 60%;
+}
+#wrap{
+	font-family: sans-serif;
+	max-width: 1000px;
+	position: absolute;
+}
+
+#report
+{
+	font-family: sans-serif;
+	margin: 0px;
+	padding-top: 0.25in;
+	padding-left: 0.5in;
+	padding-right: 0.5in;
+	width: 7.5in; /* width: 7in; */
+	height: 10.65in; /* or height: 9.5in; */
+	clear: both;
+	background-color: white;
+	//border-width: 1px;
+	//border-style: solid;
+	//border-color: grey;
+	page-break-after: always;
+}
+.generateReport{
+	width:15em;
+	margin-top: 0.5em;
+
+	font-size: 2em;
+	background-color: #0B3D75;
+	color: #fff;
+	border-radius: 0.15in;
+	border: none;
+	padding-top: .25em;
+	padding-bottom: .25em;
+}
+.pageBreak{
+	break-before: page;
+	width: 0.25in;
+	height: 0.25in;
+}
+.hidden{
+	display:none;
+}
+.column1{
+	width: 3in;
+	float: left;
+}
+.column2{
+	width: 4.25in;
+	margin-left: 0.25in;
+	float: left;
+}
+
+.rowHeading{
+	font-weight: bold;
+}
+.colHeading{
+	height:0.25in;
+	padding: 0;
+	margin-top: 0.25in;
+	font-weight: bold;
+	//background-color: blue;
+}
+.colHeadingWeighted{
+	font-size: 9px;
+}
+.colCriteria{
+	padding-left: 0.20in;
+	
+}
+.reportCard{
+	background-color: #EDEDED;
+	border-radius: 0.15in;
+	//width: 100%;
+
+}
+.firstReportCol{
+	float: left;
+	margin-right: 0.25in;
+}
+.reportCol{
+	float: left;
+	margin-right: 0.25in;
+	text-align: center;
+}
+.floatClear{
+	clear: both;
+}
+
+.lowerCard{
+	//width: 4.5in;
+	background-color: #FFDC00;
+	padding-left: 0.25in;
+	padding-right: 0.25in;
+	line-height: 4em;
+	font-weight: bold;
+	border-radius: 0.15in;
+
+	
+}
+.lowerCard .score{
+	float: right;
+	font-size: 2em;
+
+	line-height: 2em;
+}
+
+.criteriaNumbers{
+	margin-top:1em;
+}
+.criteriaHeading {
+	background-color: #EDEDED;
+	border-radius: 0.15in;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	padding-left: 0.20in;
+	padding-right: 0.20in;
+	margin:0;
+	margin-top: 1em;
+	
+	//height: 4em;
+}
+.criteriaHeading h3{
+	display: inline-block;
+	//line-height: 4em;
+	//vertical-align: middle;
+}
+.criteriaHeading label{
+	margin:0;
+	margin-left: 2em;
+	padding:0;
+	font-size: 1.2em;
+	line-height: 1em;
+	
+}
+.criteriaHeading input{
+	width: 2em;
+	margin:0;
+	padding:0;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	text-align: center;
+	
+}
+.criteriaHeadingNumbers{
+	float: right;
+	margin-top:12px;
+	clear:right;
+}
+.criteriaDescription{
+	padding-left: 0.20in;
+	padding-right: 0.20in;
+}
+.courseListWrapper{
+	margin:0;
+	padding:0;
+}
+.courseListWrapper ul {
+	float: left;
+	margin-top:0;
+	margin-right: 0.25in;
+	list-style-type: none;
+	padding:0;
+}
+label{
+	font-weight: bold;
+}
+textarea{
+	width: 100%;
+	  height: 150px;
+	  padding: 12px 20px;
+	  box-sizing: border-box;
+	  border: 2px solid #ccc;
+	  border-radius: 4px;
+	  background-color: #f8f8f8;
+	  resize: none;
+}
+
+.mb0{
+	margin-bottom: 0;
+}
+.mt0{
+	margin-top: 0.25em;
+}

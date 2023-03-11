@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Capstone Project Selection</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <script src="bin/html2pdf.bundle.min.js"></script>
+  
+</head>
+<body>
+  <div id="wrap">
+      
+    <h1>Capstone Project Selection</h1>
+  
+    <!-- <h3>Instructions</h3>
+    <div id="instructions"></div> -->
+  
+    <!-- <h2>Criteria</h2>
+    <div id="criteria"></div> -->
+  
+    <!-- <h2>Rank</h2>
+    <div id="rank"></div> -->
+  
+    <!-- <h2>Score</h2>
+    <div id="score"></div> -->
+    
+  <h3>Instructions</h3>
+  <div id="instructions"></div>
+  
+  <div class="cards">
+    <div class="card card3 grey0">
+      <h3>Criteria</h3>
+      <p id="criteria">CRITERIA DESCRIPTION</p>
+    </div>
+  
+    <div class="card card3 grey0">
+      <h3>Rank</h3>
+      <p id="rank">RANK DESCRIPTION</p>
+      
+      <dl>
+          <dt>Critical</dt><dd>3</dd>
+          <dt>Important</dt><dd>2</dd>
+          <dt>Nice to have</dt><dd>1</dd>
+      </dl>
+    </div>
+    <div class="card card3 grey0">
+      <h3>Score</h3>
+      <p id="score">SCORE DESCRIPTION</p>
+      <dl>
+          <dt>High</dt><dd>3</dd>
+          <dt>Medium</dt><dd>2</dd>
+          <dt>Low</dt><dd>1</dd>
+      </dl>
+    </div>
+  </div>
+  
+  
+  <!-- USER PROJECTS -->
+  <hr>
+  
+    <div class="card cardScore centerText">
+    <h1>My Possible Projects</h1>
+    </div>
+  
+  <div class="cards">
+    <div class="card card2 blue2 projectCard1">
+      <h3 class="centerText">Project 1</h3>
+      <p>
+        <label for="projectNameField1">Project Name: </label><br>
+        <input type="text" id="projectNameField1" style="width: 100%;" value="" onchange="updateVariables()">
+      </p>
+      <p>
+        <label for="projectDescField1">Project Description: </label>
+        <textarea id="projectDescField1" value="" onchange="updateVariables()"></textarea>
+      </p>
+      <p>
+        <label for="projectCompField1">Company Name: </label>
+        <input type="text" id="projectCompField1" style="width: 100%;" value="" onchange="updateVariables()">
+      </p>
+      <p>
+        <label for="projectEmplField1">Is my Employer: </label>
+        <select id="projectEmplField1" onchange="updateVariables()">
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+      </p>
+    </div>
+    <div class="card card2 blue2 projectCard2 hidden">
+      <h3 class="centerText">Project 2 <button onclick="removeProject2()" class="projectCloseButton2 removeProjectBtn"></button></h3>
+      
+      <p>
+        <label for="projectNameField2" >Project Name: </label><br>
+        <input type="text" id="projectNameField2" style="width: 100%;" value="" onchange="updateVariables()">
+      </p>
+      <p>
+        <label for="projectDescField2">Project Description: </label>
+        <textarea id="projectDescField2" value="" onchange="updateVariables()"></textarea>
+      </p>
+      <p>
+        <label for="projectCompField2">Company Name: </label>
+        <input type="text" id="projectCompField2" style="width: 100%;" value="" onchange="updateVariables()">
+      </p>
+      <div class="cards">
+      <p>
+        <label for="projectEmplField2">Is my Employer: </label>
+        <select name="pets" id="projectEmplField2" onchange="updateVariables()">
+          <option value="true">Yes</option>
+          <option value="false" selected>No</option>
+        </select>
+      </p>
+        
+      </div>
+    </div>
+    <div class="card card2 blue2 projectCardPlaceholder2">
+      <button class="addProjectBtn" onclick="addProject2()"></button>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card card2 blue2 projectCard3 hidden">
+      <h3 class="centerText">Project 3 <button onclick="removeProject3()" class="projectCloseButton3 removeProjectBtn"></button></h3>
+      <p>
+        <label for="projectNameField3">Project Name: </label><br>
+        <input type="text" id="projectNameField3" style="width: 100%;" value="" onchange="updateVariables()">
+      </p>
+      <p>
+        <label for="projectDescField3">Project Description: </label>
+        <textarea id="projectDescField3" value="" onchange="updateVariables()"></textarea>
+      </p>
+      <p>
+        <label for="projectCompField3">Company Name: </label>
+        <input type="text" id="projectCompField3" style="width: 100%;" value="" onchange="updateVariables()">
+      </p>
+      <p>
+        <label for="projectEmplField3">Is my Employer: </label>
+        <select name="pets" id="projectEmplField3" onchange="updateVariables()">
+          <option value="true">Yes</option>
+          <option value="false" selected>No</option>
+        </select>
+      </p>
+    </div>
+    <div class="card card2 blue2 projectCardPlaceholder3 hidden">
+      <button class="addProjectBtn" onclick="addProject3()"></button>
+    </div>
+    <div class="card card2 blue2 projectCard4 hidden">
+      <h3 class="centerText">Project 4 <button onclick="removeProject4()" class="projectCloseButton4 removeProjectBtn"></button></h3>
+      <p>
+        <label for="projectNameField4">Project Name: </label><br>
+        <input type="text" id="projectNameField4" style="width: 100%;" value="" onchange="updateVariables()">
+      </p>
+      <p>
+        <label for="projectDescField4">Project Description: </label>
+        <textarea id="projectDescField4" value="" onchange="updateVariables()"></textarea>
+      </p>
+      <p>
+        <label for="projectCompField4">Company Name: </label>
+        <input type="text" id="projectCompField4" style="width: 100%;" value="" onchange="updateVariables()">
+      </p>
+      <p>
+        <label for="projectEmplField4">Is my Employer: </label>
+        <select name="pets" id="projectEmplField4" onchange="updateVariables()">
+          <option value="true">Yes</option>
+          <option value="false" selected>No</option>
+        </select>
+      </p>
+    </div>
+    <div class="card card2 blue2 projectCardPlaceholder4 hidden">
+      <button class="addProjectBtn" onclick="addProject4()"></button>
+      
+    </div>
+  </div>
+  <hr>
+  
+  
+  <!-- Project Criteria -->
+  
+    <h2>Project Criteria</h2>
+    <div id="project-criteria"></div>
+    
+    <hr>
+    
+    <div class="card cardScore centerText">
+    <h1>Final Report</h1>
+    </div>
+    
+    <button class="generateReport" onclick="generateReport()">Generate Report as PDF</button> <button class="generateReport blue1" onclick="previewReport()">Preview Report Below</button>
+    
+    <div id="reportPreview" class="hidden">
+      <div id="report">
+      </div>
+    </div>
+    
+  
+    <div style="width: 100%; height: 15em;"></div>
+  </div>
+  
+  
+  <script>
+    const url = 'config.json';
+    const xhr = new XMLHttpRequest();
+    
+    
+    var data = "";
+    var jsonInstructions = "";
+
+
+    var projectCriteria;
+
+    const cardClasses = ['yellow2', 'purple2', 'red2', /* add more class names as needed */];
+    const cardClassesAlt = ['yellow1', 'purple1', 'red1', /* add more class names as needed */];
+
+    var projectNumberCounter = 1;
+
+    var userProjects = ['User Project One', 'User Project Two', 'User Project Three', 'User Project Four'];
+    var userProjectTitles = ['User Project OneA', 'User Project Two', 'User Project Three', 'User Project Four'];
+    // Project 1
+      // [Criteria 1 Score, Criteria 2 Score, Criteria 3 Score, Criteria 4 Score]
+    // ...
+    var userProjectScores = [
+      [1,2,3,4],
+      [1,2,3,4],
+      [1,2,3,4],
+      [1,2,3,4]
+      ]
+    var weightedProjectScores = [
+      [77,88,99,00],
+      [66,77,88,99],
+      [55,66,77,88],
+      [44,55,66,77]
+      ]
+    var userProjectDescriptions = ['DESCRIPTION One', 'DESCRIPTION Two', 'DESCRIPTION Three', 'DESCRIPTION Four'];
+    var userProjectCompanyNames = ['COMPANY NAME One', 'COMPANY NAME Two', 'COMPANY NAME Three', 'COMPANY NAME Four'];
+    var userProjectIsMyEmployer = ["true", "false", "false", "false"];    
+    
+    var criteriaRank = [33,33,33,33,33];
+    
+    var conditionalProjectScore = [7777,7777,7777,7777];
+    
+    var conditionalScoreThreshold1 = 20;
+    var conditionalScoreThreshold2 = 15;
+    
+    var projectStatus = [true, false, false, false];
+
+
+    
+    loadJson();
+
+
+
+    // BEGIN - Update Variables
+    function updateVariables(){
+      console.log("Updating Variables");
+      
+      // Project One
+      projectName1 = document.getElementById("projectNameField1").value;
+      userProjectTitles[0] = document.getElementById("projectNameField1").value;
+      userProjectDescriptions[0] = document.getElementById("projectDescField1").value;
+      userProjectCompanyNames[0] = document.getElementById("projectCompField1").value;
+      
+      if (document.getElementById("projectEmplField1").value == "true"){
+        userProjectIsMyEmployer[0] = "My employer";
+      } else {
+        userProjectIsMyEmployer[0] = "NOT my employer";
+      }
+      
+      console.log("Project One ================================");
+      console.log("Title: " + userProjectTitles[0]);
+      console.log("Description: " + userProjectDescriptions[0]);
+      console.log("Company: " + userProjectCompanyNames[0]);
+      console.log("Is My Employer: " + userProjectIsMyEmployer[0]);
+        // Get User Scores
+      projectCriteria.forEach((project, index) => {
+        userProjectScores[0][index] = document.getElementById(`Criteria${index + 1}Project1Score`).value; 
+        console.log("projectCriteria.forEach index: " + userProjectScores[0][index]);
+      });
+      
+      console.log("Project 1 userProjectScores: " + userProjectScores[0]);
+      
+      
+      // Project Two
+      userProjectTitles[1] = document.getElementById("projectNameField2").value;
+      userProjectDescriptions[1] = document.getElementById("projectDescField2").value;
+      userProjectCompanyNames[1] = document.getElementById("projectCompField2").value;
+      
+      if (document.getElementById("projectEmplField2").value == "true"){
+        userProjectIsMyEmployer[1] = "My employer";
+      } else {
+        userProjectIsMyEmployer[1] = "NOT my employer";
+      }
+      
+      console.log("Project Two ================================");
+      console.log("Title: " + userProjectTitles[1]);
+      console.log("Description: " + userProjectDescriptions[1]);
+      console.log("Company: " + userProjectCompanyNames[1]);
+      console.log("Is My Employer: " + userProjectIsMyEmployer[1]);
+      
+        // Get User Scores
+      projectCriteria.forEach((project, index) => {
+        userProjectScores[1][index] = document.getElementById(`Criteria${index + 1}Project2Score`).value; 
+        console.log("projectCriteria.forEach index: " + userProjectScores[1][index]);
+      });
+      console.log("Project 2 userProjectScores: " + userProjectScores[1]);
+    
+      // Project Three
+      userProjectTitles[2] = document.getElementById("projectNameField3").value;
+      userProjectDescriptions[2] = document.getElementById("projectDescField3").value;
+      userProjectCompanyNames[2] = document.getElementById("projectCompField3").value;
+
+      if (document.getElementById("projectEmplField3").value == "true"){
+        userProjectIsMyEmployer[2] = "My employer";
+      } else {
+        userProjectIsMyEmployer[2] = "NOT my employer";
+      }
+
+      console.log("Project Three ================================");
+      console.log("Title: " + userProjectTitles[2]);
+      console.log("Description: " + userProjectDescriptions[2]);
+      console.log("Company: " + userProjectCompanyNames[2]);
+      console.log("Is My Employer: " + userProjectIsMyEmployer[2]);
+        // Get User Scores
+      projectCriteria.forEach((project, index) => {
+        userProjectScores[2][index] = document.getElementById(`Criteria${index + 1}Project3Score`).value; 
+        console.log("projectCriteria.forEach index: " + userProjectScores[2][index]);
+      });
+      console.log("Project 3 userProjectScores: " + userProjectScores[2]);
+      
+      // Project Four
+      userProjectTitles[3] = document.getElementById("projectNameField4").value;
+      userProjectDescriptions[3] = document.getElementById("projectDescField4").value;
+      userProjectCompanyNames[3] = document.getElementById("projectCompField4").value;
+
+      if (document.getElementById("projectEmplField4").value == "true"){
+        userProjectIsMyEmployer[3] = "My employer";
+      } else {
+        userProjectIsMyEmployer[3] = "NOT my employer";
+      }
+
+      console.log("Project Four ================================");
+      console.log("Title: " + userProjectTitles[3]);
+      console.log("Description: " + userProjectDescriptions[3]);
+      console.log("Company: " + userProjectCompanyNames[3]);
+      console.log("Is My Employer: " + userProjectIsMyEmployer[3]);
+      
+        // Get User Scores
+      projectCriteria.forEach((project, index) => {
+        userProjectScores[3][index] = document.getElementById(`Criteria${index + 1}Project4Score`).value; 
+        console.log("projectCriteria.forEach index: " + userProjectScores[3][index]);
+      });
+      console.log("Project 4 userProjectScores: " + userProjectScores[3]);
+      
+      RenderReport();
+    }
+    
+    // END - Update Variables
+
+    // BEGIN - Adding and Hiding Projects -->
+    function addProject2(){
+      projectStatus[1] = true;
+      let projectCardElement2 = document.querySelector(".projectCard2");
+      let projectCardPlaceholder2 = document.querySelector(".projectCardPlaceholder2");
+      let projectCardPlaceholder3 = document.querySelector(".projectCardPlaceholder3");
+      projectCardElement2.classList.remove("hidden");
+      projectCardPlaceholder2.classList.add("hidden");
+      projectCardPlaceholder3.classList.remove("hidden");
+      
+      //Show Project 2 in all criteria
+      document.querySelectorAll('div.projTile2').forEach(function(el) {
+          el.classList.remove("hidden");
+        });
+      //Show Project 2 in the report
+      let proj2 = document.querySelector(".proj2");
+      proj2.classList.remove("hidden");
+      }
+    function removeProject2(){
+      projectStatus[1] = false;
+      //HIDE Project 2
+      let projectCardElement2 = document.querySelector(".projectCard2");
+      projectCardElement2.classList.add("hidden");
+      //Show Project 2 Placeholder
+      let projectCardPlaceholder2 = document.querySelector(".projectCardPlaceholder2");
+      projectCardPlaceholder2.classList.remove("hidden");
+      //HIDE Project 3 Placeholder
+      let projectCardPlaceholder3 = document.querySelector(".projectCardPlaceholder3");
+      projectCardPlaceholder3.classList.add("hidden");
+      
+      //HIDE Project 2 in all criteria
+      document.querySelectorAll('div.projTile2').forEach(function(el) {
+          el.classList.add("hidden");
+        });
+      //HIDE Project 2 in the report
+      let proj2 = document.querySelector(".proj2");
+      proj2.classList.add("hidden");
+    }
+    function addProject3(projectNumber, status){
+      projectStatus[2] = true;
+      //HIDE Project 2 Close Button
+      let projectCloseButton2 = document.querySelector(".projectCloseButton2");
+      projectCloseButton2.classList.add("hidden");
+      //Show Project 3
+      let projectCardElement3 = document.querySelector(".projectCard3");
+      projectCardElement3.classList.remove("hidden");
+      //HIDE Project 3 Placeholder
+      let projectCardPlaceholder3 = document.querySelector(".projectCardPlaceholder3");
+      projectCardPlaceholder3.classList.add("hidden");
+      //SHOW Project 4 Placeholder
+      let projectCardPlaceholder4 = document.querySelector(".projectCardPlaceholder4");
+      projectCardPlaceholder4.classList.remove("hidden");
+      
+      //Show Project 3 in all criteria
+      document.querySelectorAll('div.projTile3').forEach(function(el) {
+          el.classList.remove("hidden");
+        });
+      //Show Project 3 in the report
+      let proj3 = document.querySelector(".proj3");
+      proj3.classList.remove("hidden");
+    }
+    
+    function removeProject3(){
+      projectStatus[2] = false;
+      //Show Project 2 Close Button
+      let projectCloseButton2 = document.querySelector(".projectCloseButton2");
+      projectCloseButton2.classList.remove("hidden");
+      //HIDE Project 3
+      let projectCardElement3 = document.querySelector(".projectCard3");
+      projectCardElement3.classList.add("hidden");
+      //Show Project 3 Placeholder
+      let projectCardPlaceholder3 = document.querySelector(".projectCardPlaceholder3");
+      projectCardPlaceholder3.classList.remove("hidden");
+      //HIDE Project 4 Placeholder
+      let projectCardPlaceholder4 = document.querySelector(".projectCardPlaceholder4");
+      projectCardPlaceholder4.classList.add("hidden");
+      
+      //HIDE Project 3 in all criteria
+      document.querySelectorAll('div.projTile3').forEach(function(el) {
+          el.classList.add("hidden");
+        });
+      //HIDE Project 3 in the report
+      let proj3 = document.querySelector(".proj3");
+      proj3.classList.add("hidden");
+    }
+    function addProject4(projectNumber, status){
+      projectStatus[3] = true;
+      //HIDE Project 3 Close Button
+      let projectCloseButton3 = document.querySelector(".projectCloseButton3");
+      projectCloseButton3.classList.add("hidden");
+      //Show Project 4
+      let projectCardElement4 = document.querySelector(".projectCard4");
+      projectCardElement4.classList.remove("hidden");
+      //HIDE Project 4 Placeholder
+      let projectCardPlaceholder4 = document.querySelector(".projectCardPlaceholder4");
+      projectCardPlaceholder4.classList.add("hidden");
+      
+      //Show Project 4 in all criteria
+      document.querySelectorAll('div.projTile4').forEach(function(el) {
+          el.classList.remove("hidden");
+        });
+      //Show Project 4 in the report
+      let proj4 = document.querySelector(".proj4");
+      proj4.classList.remove("hidden"); 
+    }
+    function removeProject4(){
+      projectStatus[3] = false;
+      //Show Project 3 Close Button
+      let projectCloseButton3 = document.querySelector(".projectCloseButton3");
+      projectCloseButton3.classList.remove("hidden");
+      //HIDE Project 4
+      let projectCardElement4 = document.querySelector(".projectCard4");
+      projectCardElement4.classList.add("hidden");
+      //Show Project 4 Placeholder
+      let projectCardPlaceholder4 = document.querySelector(".projectCardPlaceholder4");
+      projectCardPlaceholder4.classList.remove("hidden");
+      
+      //HIDE Project 4 in all criteria
+      document.querySelectorAll('div.projTile4').forEach(function(el) {
+          el.classList.add("hidden");
+        });
+      //HIDE Project 4 in the report
+      let proj4 = document.querySelector(".proj4");
+      proj4.classList.add("hidden");
+    }
+    
+    // END Adding and Hiding Projects -->
+
+
+    // BEGIN Rendering Report
+    function RenderReport(){
+      var reportContainer = document.getElementById('report');
+      reportContainer.replaceChildren(); 
+      
+      // Reset the math
+      for (var projectIndex = 0; projectIndex < userProjects.length; projectIndex++) {
+        //Looking through PROJECTS and EACH PROJECT HAS MULTIPLE CRITERIA
+        projectCriteria.forEach((project, criteriaIndex) => {
+          //Looping through CRITERIA for EACH PROJECT
+          weightedProjectScores[projectIndex][criteriaIndex] = 0;
+        });
+        
+        projectCriteria.forEach((project, criteriaIndex) => {
+          conditionalProjectScore[projectIndex] = 0;
+        });
+      }
+      
+      
+      // Doing the math
+      for (var projectIndex = 0; projectIndex < userProjects.length; projectIndex++) {
+        //Looking through PROJECTS and EACH PROJECT HAS MULTIPLE CRITERIA
+        projectCriteria.forEach((project, criteriaIndex) => {
+          //Looping through CRITERIA for EACH PROJECT
+          weightedProjectScores[projectIndex][criteriaIndex] = parseInt(criteriaRank[criteriaIndex]) * parseInt(userProjectScores[projectIndex][criteriaIndex]);
+        });
+        
+        projectCriteria.forEach((project, criteriaIndex) => {
+          conditionalProjectScore[projectIndex] = conditionalProjectScore[projectIndex] + weightedProjectScores[projectIndex][criteriaIndex];
+        });
+      }
+
+      
+      // Render Report Heading
+      var reportHTMLHeading = '<h3 class="mb0">CAPSTONE PROJECT SELECTION</h3>' + 
+      '<small>Conditional scores are meant as a starting point to discuss the feasibility of a project, not as an absolute indicator of a project&#39;s appropriateness for the Capstone course</small>';
+      
+      var reportHTMLHeadingElement = document.createElement('div');
+      reportHTMLHeadingElement.innerHTML = reportHTMLHeading;
+      
+      reportContainer.appendChild(reportHTMLHeadingElement);
+      
+      // Render the Projects in the report
+      for (var i = 0; i < userProjects.length; i++) {
+        var reportHTML = '<div id="project" class="proj' + (i+1);
+          if (projectStatus[i]){
+            reportHTML = reportHTML +
+            '';
+          } else
+          {
+            reportHTML = reportHTML +
+            ' hidden';
+          }
+          reportHTML = reportHTML +
+          ' ">' +
+          '<p class="mb0"><strong>Option ' + (i+1) + '</strong></p>' +
+          '<h3 class="mb0 mt0"><span class="project' + (i+1) + 'Title">' + userProjectTitles[i] + '</span></h3>' +
+          '<div class="column1">' +
+            '<p class="mb0"><strong>Organization</strong></p>' +
+            '<p class="mt0"><span class="projectCompany' + (i+1) + '">' + userProjectCompanyNames[i] + '</span></p>' +
+            '<p><strong>Project Description</strong></p>' +
+            '<p><span class="projectDescription' + (i+1) + '">' + userProjectDescriptions[i] + '</span></p>' +
+          '</div>' +
+          '<div class="column2">' +
+            '<p class="mb0"><strong>Affiliation</strong></p>' +
+            '<p class="mt0" id="affiliation' + (i+1) + '">' + userProjectIsMyEmployer[i] + '</p>' +
+            '<p><strong>Project Scoring</strong></p>' +
+            '<div class="reportCard">' +
+              '<div class="upperCard">' +
+                '<div class="colCriteria firstReportCol">' +
+                  '<p class="colHeading">Criteria</p>';
+                  // Render Criteria Titles
+                    projectCriteria.forEach((criteria, index) => {
+                      reportHTML = reportHTML +
+                      '<p class="rowHeading">' + jsonCriteriaTitles[index] + '</p>';
+                      console.log(jsonCriteriaTitles[index]);
+                    });
+                  
+                  reportHTML = reportHTML +
+                  
+                '</div>' +
+                '<div class="colRank reportCol">' +
+                  '<p class="colHeading">Rank</p>';
+                  // Render Provided Ranks Column
+                  projectCriteria.forEach((project, index) => {
+                    reportHTML = reportHTML +
+                    '<p>' + criteriaRank[index] + '</p>';
+                  });
+
+                reportHTML = reportHTML +
+                //
+                '</div>' +
+                '<div class="colScore reportCol">' +
+                  '<p class="colHeading">Score</p>'; 
+                  // Render User Scores Column
+                  projectCriteria.forEach((project, index) => {
+                    reportHTML = reportHTML +
+                    '<p>' + userProjectScores[i][index] + '</p>';
+                  });
+                  
+                  reportHTML = reportHTML +
+
+                  '</div>' +
+                  '<div class="colWeighted reportCol">' +
+                  '<p class="colHeading colHeadingWeighted">Weighted<br>Score</p>';
+                  // Render Weighted Scores Column
+                  projectCriteria.forEach((project, index) => {
+                    reportHTML = reportHTML +
+                    '<p>' + weightedProjectScores[i][index] + '</p>';
+                  });
+                  
+                  reportHTML = reportHTML +
+                  '</div>' +
+                  '</div>' +
+                  '<div class="floatClear"></div>' +
+                  '<div class="lowerCard" id="projectScoreColor' + (i+1) + '">' +
+                  '<span class="label">Conditional Project Score</span>' +
+                  '<span class="score score' + (i+1) + '">' + conditionalProjectScore[i] + '</span>' +
+                  '</div>' +
+                  '</div>' +
+                  '</div>' +
+                  '</div>';
+                    
+                    // Do something with the projectHTML, such as adding it to the DOM
+                    
+                    var reportElement = document.createElement('div');
+                    reportElement.innerHTML = reportHTML;
+                    
+                    reportContainer.appendChild(reportElement);
+      }
+      
+      // Update Colors for the report
+      
+      let projectScoreColor1 = document.querySelector("#projectScoreColor1");
+      if (conditionalProjectScore[0] > conditionalScoreThreshold1){
+        projectScoreColor1.style.backgroundColor = "#5FB234"; //green
+        projectScoreColor1.style.color = "#fff"; //white
+      } else if (conditionalProjectScore[0] > conditionalScoreThreshold2){
+        projectScoreColor1.style.backgroundColor = "#FFDC00"; //yellow
+        projectScoreColor1.style.color = "#000"; //black
+      } else {
+        projectScoreColor1.style.backgroundColor = "#BC1D1D"; //red
+        projectScoreColor1.style.color = "#fff"; //white
+      }
+      
+      let projectScoreColor2 = document.querySelector("#projectScoreColor2");
+      if (conditionalProjectScore[1] > conditionalScoreThreshold1){
+        projectScoreColor2.style.backgroundColor = "#5FB234"; //green
+        projectScoreColor2.style.color = "#fff"; //white
+      } else if (conditionalProjectScore[1] > conditionalScoreThreshold2){
+        projectScoreColor2.style.backgroundColor = "#FFDC00"; //yellow
+        projectScoreColor2.style.color = "#000"; //black
+      } else {
+        projectScoreColor2.style.backgroundColor = "#BC1D1D"; //red
+        projectScoreColor2.style.color = "#fff"; //white
+      }
+      
+      let projectScoreColor3 = document.querySelector("#projectScoreColor3");
+      if (conditionalProjectScore[2] > conditionalScoreThreshold1){
+        projectScoreColor3.style.backgroundColor = "#5FB234"; //green
+        projectScoreColor3.style.color = "#fff"; //white
+      } else if (conditionalProjectScore[2] > conditionalScoreThreshold2){
+        projectScoreColor3.style.backgroundColor = "#FFDC00"; //yellow
+        projectScoreColor3.style.color = "#000"; //black
+      } else {
+        projectScoreColor3.style.backgroundColor = "#BC1D1D"; //red
+        projectScoreColor3.style.color = "#fff"; //white
+      }
+      
+      let projectScoreColor4 = document.querySelector("#projectScoreColor4");
+      if (conditionalProjectScore[3] > conditionalScoreThreshold1){
+        projectScoreColor4.style.backgroundColor = "#5FB234"; //green
+        projectScoreColor4.style.color = "#fff"; //white
+      } else if (conditionalProjectScore[3] > conditionalScoreThreshold2){
+        projectScoreColor4.style.backgroundColor = "#FFDC00"; //yellow
+        projectScoreColor4.style.color = "#000"; //black
+      } else {
+        projectScoreColor4.style.backgroundColor = "#BC1D1D"; //red
+        projectScoreColor4.style.color = "#fff"; //white
+      }
+    }
+    
+
+
+    function previewReport(){
+      updateVariables();
+      let reportPreview = document.querySelector("#reportPreview");
+      reportPreview.classList.remove("hidden");
+    }
+    
+    function generateReport(){
+      updateVariables();
+      generatePDF();
+    }
+    
+    function generatePDF() {
+    // Choose the element that our invoice is rendered in.
+    const element = document.getElementById("report");
+    // Choose the element and save the PDF for our user.
+    var opt = {
+        filename:     'myfile.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 4 },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+    html2pdf()
+      .set(opt)
+      
+      .from(element)
+      .save(opt);
+    }
+
+
+    var data = "";
+    var jsonCriteriaTitles = ["TITLE", "TITLE", "TITLE"]
+    
+    
+    function loadJson(){
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            data = JSON.parse(xhr.responseText);
+            
+            
+            // load variables
+            jsonInstructions = data['instructions-description'];
+            jsonCriteriaExplaination = data['criteria']['description'];
+            jsonRankExplaination = data['criteria']['rank']['description'];
+            jsonScoreExplaination = data['criteria']['score']['description'];
+            
+            projectCriteria = data['project-criteria'];
+            console.log(projectCriteria);
+            projectCriteria.forEach((criteria, index) => {
+              jsonCriteriaTitles[index] = criteria['criteria-title'];
+              console.log(jsonCriteriaTitles[index]);
+            });
+            
+            // Project Criteria List
+            
+      
+            // display the instructions
+            document.getElementById('instructions').innerHTML = data['instructions-description'];
+      
+            // display the criteria
+            document.getElementById('criteria').innerHTML = data['criteria']['description'];
+      
+            // display the rank
+            document.getElementById('rank').innerHTML = data['criteria']['rank']['description'];
+      
+            // display the score
+            document.getElementById('score').innerHTML = data['criteria']['score']['description'];
+      
+            // display the project criteria
+            projectCriteria = data['project-criteria'];
+            const projectList = document.getElementById('project-criteria');
+            
+            const cardsDiv = document.createElement('div');
+            cardsDiv.classList.add('cards');
+            
+            projectCriteria.forEach((project, criteriaindex) => {
+              
+              // Criteria - RANK
+              criteriaNumberCounter = criteriaindex;
+              criteriaRank[criteriaNumberCounter] = project['criteria-rank'];   // loading Ranks into my variables
+              console.log("criteriaRank - Number: "+ criteriaNumberCounter + " Rank: " + criteriaRank[criteriaNumberCounter]);
+              // Criteria - RANK
+              
+              const cardDiv = document.createElement('div');
+              //cardDiv.classList.add('card', 'yellow2');
+              cardDiv.classList.add('card', cardClasses[criteriaindex % cardClasses.length]);
+              
+              const cardHeader = document.createElement('h2');
+              cardHeader.style.marginLeft = '0.5em';
+              cardHeader.innerText = project['criteria-title'];
+            
+              const innerCardDiv = document.createElement('div');
+              innerCardDiv.classList.add('cards');
+            
+              const leftCard = document.createElement('div');
+              leftCard.classList.add('card', 'card44');
+            
+              const leftCardParagraph = document.createElement('p');
+              leftCardParagraph.innerHTML = project['project-description'];
+            
+              const leftCardStrong = document.createElement('strong');
+              leftCardStrong.innerText = 'Associated Courses';
+            
+              const courseListWrapperDiv = document.createElement('div');
+              courseListWrapperDiv.classList.add('courseListWrapper');
+            
+              const courseList = document.createElement('ul');
+              const associatedCourses = project['associated-courses'];
+              associatedCourses.forEach(course => {
+                const courseItem = document.createElement('li');
+                courseItem.innerText = course;
+                courseList.appendChild(courseItem);
+              });
+            
+              courseListWrapperDiv.appendChild(courseList);
+            
+              leftCard.appendChild(leftCardParagraph);
+              leftCard.appendChild(document.createElement('br'));
+              leftCard.appendChild(leftCardStrong);
+              leftCard.appendChild(document.createElement('br'));
+              leftCard.appendChild(courseListWrapperDiv);
+            
+              const rightCard = document.createElement('div');
+              rightCard.classList.add('card', 'cardScore');
+              
+            // User Projects 
+             userProjects.forEach((element, index) => {
+                const projectTile1Div = document.createElement('div');
+                
+                if (index == 0){
+                  projectTile1Div.classList.add('projectTile', cardClassesAlt[criteriaindex % cardClassesAlt.length], `projTile${index + 1}`);
+                } else
+                {
+                  projectTile1Div.classList.add('projectTile', cardClassesAlt[criteriaindex % cardClassesAlt.length], `projTile${index + 1}`, `hidden`);
+                }
+              
+                const projectTitleSpan = document.createElement('span');
+                projectTitleSpan.classList.add(`project${index + 1}Title`);
+                // projectTitleSpan.innerText = userProjectTitles[index]; // <-- TODO Add Project Title
+              
+                const strongProject = document.createElement('strong');
+                strongProject.innerText = `Project ${index + 1}`; // <-- TODO Add Project Title
+              
+                const criteriaNumbersDiv = document.createElement('div');
+                criteriaNumbersDiv.classList.add('criteriaNumbers');
+              
+                const labelRank = document.createElement('label');
+                labelRank.setAttribute('for', `rankOrgImpact${index + 1}`);
+                labelRank.innerText = 'Rank: ';
+              
+                const rankInput = document.createElement('input');
+                rankInput.setAttribute('type', 'text');
+                rankInput.setAttribute('id', `rankOrgImpact${index + 1}`);
+                rankInput.setAttribute('disabled', 'true');
+                rankInput.classList.add('disabled-text');
+                rankInput.setAttribute('value', project['criteria-rank']);
+                
+              
+                const labelScore = document.createElement('label');
+                labelScore.setAttribute('for', `scoreOrgImpact${index + 1}`);
+                labelScore.innerText = 'Score: ';
+              
+                const scoreInput = document.createElement('input');
+                scoreInput.setAttribute('type', 'number');
+                scoreInput.setAttribute('min', 0);
+                scoreInput.setAttribute('max', 3);
+                scoreInput.setAttribute('maxlength', 1);
+                scoreInput.setAttribute('id', `Criteria${criteriaNumberCounter + 1}Project${index + 1}Score`); /// <<<<<<<<<<< criteriaNumberCounter Criteria1Project1Score
+                scoreInput.setAttribute('value', 0);
+              
+                criteriaNumbersDiv.appendChild(labelRank);
+                criteriaNumbersDiv.appendChild(rankInput);
+                //criteriaNumbersDiv.appendChild(document.createElement('br'));
+                criteriaNumbersDiv.appendChild(labelScore);
+                criteriaNumbersDiv.appendChild(scoreInput);
+              
+                projectTile1Div.appendChild(strongProject);
+                projectTile1Div.appendChild(projectTitleSpan);
+                projectTile1Div.appendChild(document.createElement('br'));
+                projectTile1Div.appendChild(criteriaNumbersDiv);
+                  
+                  rightCard.appendChild(projectTile1Div);
+                  
+                  innerCardDiv.appendChild(leftCard);
+                  innerCardDiv.appendChild(rightCard);
+                  
+                  cardDiv.appendChild(cardHeader);
+                  cardDiv.appendChild(innerCardDiv);
+                  
+                  projectList.appendChild(cardDiv);
+              });
+            });
+            updateVariables();
+            
+ 
+            
+            // let reportPreview = document.querySelector("#reportPreview");
+            // reportPreview.classList.add("hidden");
+            
+          } else {
+            console.error('Failed to load JSON file.');
+          }
+        }
+
+      };
+      xhr.open('GET', url, true);
+      xhr.send();
+    }
+    
+
+
+    // RenderReport();
+  </script>
+
+</body>
+</html>
