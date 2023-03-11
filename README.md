@@ -16,3 +16,8 @@ To run the UW Extended Campus Capstone Selection Tool, you will need:
 
 ## Contact
 bryan.bortz@uwex.wisconsin.edu
+
+## Acknowledgements
+html2pdf.js v0.9.3
+Copyright (c) 2021 Erik Koopmans
+Released under the MIT License.
